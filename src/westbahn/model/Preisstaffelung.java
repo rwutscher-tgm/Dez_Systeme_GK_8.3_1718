@@ -4,23 +4,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
 public class Preisstaffelung {
 
-	@Id
-	@Column
-	private static Long serialVersionUID;
+	private static long serialVersionUID;
 
-	@Column
 	private float grossGepaeck = 1.02f;
 
-	@Column
 	private float fahrrad = 1.05f;
 
-	@Column
 	private int zeitkarteWoche = 8;
 
-	@Column
 	private int zeitkarteMonat = 25;
 
 	@Column
@@ -29,7 +22,6 @@ public class Preisstaffelung {
 	@Column
 	private static Preisstaffelung instance;
 
-	@Column
 	public static Preisstaffelung getInstance() {
 		return null;
 	}

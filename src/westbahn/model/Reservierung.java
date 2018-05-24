@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Reservierung {
 
-	private Long ID;
+	private long id;
 
 	private Date datum;
 
@@ -14,7 +14,7 @@ public class Reservierung {
 
 	private int preis = 150;
 
-	private StatusInfo status;
+	private String status;//StatusInfo
 
 	private Zug zug;
 

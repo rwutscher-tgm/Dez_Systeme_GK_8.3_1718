@@ -1,9 +1,8 @@
 package westbahn.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Sonderangebot {
@@ -24,7 +23,11 @@ public class Sonderangebot {
 	@Column
 	private float preisNachlass = 0.5f;
 
-	@Column
-	private Ticket tickets;
+	@OneToMany
+	@JoinTable(
+			name = "benutzer_tickets",
+			joinColumns = {@JoinColumn(referencedColumnName = "id")},
+			inverseJoinColumns = { @JoinColumn(referencedColumnName = "id") })
+	private List<Ticket> tickets;
 
 }

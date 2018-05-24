@@ -1,13 +1,15 @@
 package westbahn.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Benutzer {
 
 	@Id
 	@Column(name="id")
-	private Long ID;
+	private long ID;
 
 	@Column
 	private String vorName;
@@ -25,18 +27,20 @@ public class Benutzer {
 	private String smsNummer;
 
 	@Column
-	private Long verbuchtePraemienMeilen;
-
-	@OneToOne(cascade= CascadeType.ALL)
-	@JoinColumn(name = "ticket")
-	private Ticket tickets;
+	private long verbuchtePraemienMeilen;
 
 	@OneToMany
-//(cascade = CascadeType.ALL, mappedBy = "comment_system", orphanRemoval = true)//(cascade=CascadeType.ALL)
+	@JoinTable(
+			name = "benutzer_tickets",
+			joinColumns = {@JoinColumn(referencedColumnName = "id")},
+			inverseJoinColumns = { @JoinColumn(referencedColumnName = "id") })
+	private List<Ticket> tickets;
+
+	@OneToMany
 	@JoinTable(
 			name = "benutzer_reservierungen",
 			joinColumns = {@JoinColumn(referencedColumnName = "id")},
 			inverseJoinColumns = { @JoinColumn(referencedColumnName = "id") })
-	private Reservierung[] reservierungen;
+	private List<Reservierung> reservierungen;
 
 }

@@ -9,7 +9,7 @@ public class Bahnhof {
 
 	@Id
 	@Column
-	private Long ID;
+	private long ID;
 
 	@Column
 	private String name;
