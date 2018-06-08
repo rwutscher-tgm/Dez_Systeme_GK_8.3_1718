@@ -6,16 +6,19 @@ import javax.persistence.NamedQuery;
 @NamedQueries(
         {
                 @NamedQuery(
-                        name = "findAllReservationsByEmail",//query = "from Reservierung r where r.benutzer.= :a"
-                        query = "from Reservierung r where r.benutzer = (from Benutzer b where b.eMail = :eMail)"
+                        name = "findAllReservierungensByEmail",//query = "from Reservierung r where r.benutzer.= :a"
+                        query="SELECT r FROM Reservierung r LEFT JOIN r.benutzer b WHERE b=:email"
+                        //query = "from Reservierung r where r.benutzer = (from Benutzer b where b.eMail = :eMail)"
                 ),
                 @NamedQuery(
                         name = "findBenutzerWithMonatskarte",
-                        query = "from Benutzer b where b.tickets = 'MONATSKARTE'"
+                        query = "SELECT b FROM Benutzer b LEFT JOIN b.tickets t WHERE t.typ=1"
+                        //query = "from Benutzer b where b.tickets = 'MONATSKARTE'"
                 ),
                 @NamedQuery(
-                        name = "asdasd",
-                        query = "from Ticket t where (select f from Strecke f where f.start = :start) "
+                        name = "findTicketByStrecke",
+                        query = "SELECT t FROM Ticket t LEFT JOIN t.strecke s WHERE s.start=:start AND s.ende=:ende"
+                        //query = "from Ticket t where (select f from Strecke f where f.start = :start) "
                 )
         }
 )
