@@ -12,7 +12,7 @@ public class Reservierung {
 
 	private int preis = 150;
 
-	private String status;//StatusInfo
+	private StatusInfo status;//StatusInfo
 
 	private Zug zug;
 
@@ -22,75 +22,91 @@ public class Reservierung {
 
 	private Zahlung zahlung;
 
-	public long getId() {
-		return id;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public Date getDatum() {
-		return datum;
-	}
+    public Date getDatum() {
+        return datum;
+    }
 
-	public void setDatum(Date datum) {
-		this.datum = datum;
-	}
+    public void setDatum(Date datum) {
+        this.datum = datum;
+    }
 
-	public int getPraemienMeilenBonus() {
-		return praemienMeilenBonus;
-	}
+    public int getPraemienMeilenBonus() {
+        return praemienMeilenBonus;
+    }
 
-	public void setPraemienMeilenBonus(int praemienMeilenBonus) {
-		this.praemienMeilenBonus = praemienMeilenBonus;
-	}
+    public void setPraemienMeilenBonus(int praemienMeilenBonus) {
+        this.praemienMeilenBonus = praemienMeilenBonus;
+    }
 
-	public int getPreis() {
-		return preis;
-	}
+    public int getPreis() {
+        return preis;
+    }
 
-	public void setPreis(int preis) {
-		this.preis = preis;
-	}
+    public void setPreis(int preis) {
+        this.preis = preis;
+    }
 
-	public String getStatus() {
-		return status;
-	}
+    public StatusInfo getStatus() {
+        return status;
+    }
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+    public void setStatus(StatusInfo status) {
+        this.status = status;
+    }
 
-	public Zug getZug() {
-		return zug;
-	}
+    public Zug getZug() {
+        return zug;
+    }
 
-	public void setZug(Zug zug) {
-		this.zug = zug;
-	}
+    public void setZug(Zug zug) {
+        this.zug = zug;
+    }
 
-	public Strecke getStrecke() {
-		return strecke;
-	}
+    public Strecke getStrecke() {
+        return strecke;
+    }
 
-	public void setStrecke(Strecke strecke) {
-		this.strecke = strecke;
-	}
+    public void setStrecke(Strecke strecke) {
+        this.strecke = strecke;
+    }
 
-	public Benutzer getBenutzer() {
-		return benutzer;
-	}
+    public Benutzer getBenutzer() {
+        return benutzer;
+    }
 
-	public void setBenutzer(Benutzer benutzer) {
-		this.benutzer = benutzer;
-	}
+    public void setBenutzer(Benutzer benutzer) {
+        this.benutzer = benutzer;
+    }
 
-	public Zahlung getZahlung() {
-		return zahlung;
-	}
+    public Zahlung getZahlung() {
+        return zahlung;
+    }
 
-	public void setZahlung(Zahlung zahlung) {
-		this.zahlung = zahlung;
-	}
+    public void setZahlung(Zahlung zahlung) {
+        this.zahlung = zahlung;
+    }
+
+    public Reservierung(Date datum, int praemienMeilenBonus, int preis, StatusInfo status, Zug zug, Strecke strecke, Benutzer benutzer, Zahlung zahlung) {
+        this.datum = datum;
+        this.praemienMeilenBonus = praemienMeilenBonus;
+        this.preis = preis;
+        this.status = status;
+        this.zug = zug;
+        this.strecke = strecke;
+        this.benutzer = benutzer;
+        this.zahlung = zahlung;
+    }
+
+    public Reservierung() {
+    }
+
+
 }

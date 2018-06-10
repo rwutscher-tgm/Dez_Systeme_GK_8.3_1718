@@ -11,5 +11,12 @@
       <user-name>testwu</user-name>
       <introspection-schemas>*:westbahn</introspection-schemas>
     </data-source>
+    <data-source name="database.db" uuid="c7b1ca89-f1dc-47b9-970e-2c3700153855">
+      <database-info product="SQLite" version="3.20.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.20.1.1" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
   </component>
 </project>

@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="Hibernate 5.2.3-5.2.3" type="hibernate">
+    <properties version="5.2.3" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/hibernate-jpa-2.1-api-1.0.0.Final.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/hibernate-commons-annotations-5.0.1.Final.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/dom4j-1.6.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/jboss-logging-3.3.0.Final.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/antlr-2.7.7.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/jandex-2.0.0.Final.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/javassist-3.20.0-GA.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/classmate-1.3.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/geronimo-jta_1.1_spec-1.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/cdi-api-1.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/javax.inject-1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/el-api-2.2.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/jsr250-api-1.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.2.3.Final/2903cfef064e2d4c650ece5a5dceefad826e4b26/hibernate-core-5.2.3.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -11,11 +11,12 @@ import java.util.List;
 		//query = "from Benutzer b where b.tickets = 'MONATSKARTE'"
 )
 @Entity
+@Table(name = "benutzer")
 public class Benutzer {
 
 	@Id
 	@Column(name="id")
-	private long ID;
+	private long id;
 
 	@Column
 	private String vorName;
@@ -50,11 +51,11 @@ public class Benutzer {
 	private List<Reservierung> reservierungen;
 
 	public long getID() {
-		return ID;
+		return id;
 	}
 
 	public void setID(long ID) {
-		this.ID = ID;
+		this.id = ID;
 	}
 
 	public String getVorName() {
@@ -120,4 +121,15 @@ public class Benutzer {
 	public void setReservierungen(List<Reservierung> reservierungen) {
 		this.reservierungen = reservierungen;
 	}
+
+    public Benutzer(String vorName, String nachName, String eMail, String passwort, String smsNummer) {
+        this.vorName = vorName;
+        this.nachName = nachName;
+        this.eMail = eMail;
+        this.passwort = passwort;
+        this.smsNummer = smsNummer;
+    }
+
+    public Benutzer() {
+    }
 }

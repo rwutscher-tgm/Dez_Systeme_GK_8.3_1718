@@ -7,17 +7,19 @@ import javax.persistence.Persistence;
 import static org.hibernate.jpa.AvailableSettings.PERSISTENCE_UNIT_NAME;
 
 public class DAO <T>{
+
     private static EntityManagerFactory factory;
+    private EntityManager em;
 
     public DAO(){
         this.factory = Persistence.createEntityManagerFactory("westbahn");
+        em = factory.createEntityManager();
     }
 
     public void save(T object){
-        EntityManager em = factory.createEntityManager();
+
         em.getTransaction().begin();
         em.persist(object);
-        // do what ever you need
         em.getTransaction().commit();
         em.close();
     }

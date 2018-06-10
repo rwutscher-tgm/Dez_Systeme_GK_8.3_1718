@@ -14,10 +14,13 @@ public abstract class Ticket {
 	@Column
 	protected Long ID;
 
-	@Column
+	@ManyToOne
+	@JoinColumn
 	protected Strecke strecke;
 
-	@Column
+	//@ManyToOne
+	//@JoinColumn
+	@Transient
 	protected Zahlung zahlung;
 
 }

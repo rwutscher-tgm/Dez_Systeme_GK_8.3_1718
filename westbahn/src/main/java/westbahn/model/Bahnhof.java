@@ -7,7 +7,7 @@ public class Bahnhof {
 
 	@Id
 	@Column
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long ID;
 
 	@Column
@@ -28,9 +28,8 @@ public class Bahnhof {
     public Bahnhof() {
     }
 
-    public Bahnhof(String name, int absPreisEntfernung, int absKmEntfernung, int absZeitEntfernung, boolean kopfBahnhof) {
+    public Bahnhof(String name, int absKmEntfernung, int absZeitEntfernung, boolean kopfBahnhof) {
         this.name = name;
-        this.absPreisEntfernung = absPreisEntfernung;
         this.absKmEntfernung = absKmEntfernung;
         this.absZeitEntfernung = absZeitEntfernung;
         this.kopfBahnhof = kopfBahnhof;
