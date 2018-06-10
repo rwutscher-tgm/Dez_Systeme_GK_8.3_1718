@@ -3,7 +3,7 @@ package westbahn.query;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
-@NamedQueries(
+/*@NamedQueries(
         {
                 @NamedQuery(
                         name = "findAllReservierungensByEmail",//query = "from Reservierung r where r.benutzer.= :a"
@@ -21,7 +21,7 @@ import javax.persistence.NamedQuery;
                         //query = "from Ticket t where (select f from Strecke f where f.start = :start) "
                 )
         }
-)
+)*/
 
 public class Queries {
 

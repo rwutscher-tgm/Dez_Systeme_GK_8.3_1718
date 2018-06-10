@@ -12,6 +12,9 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile('org.hibernate:hibernate-core:5.2.17.Final')
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+
 
     // https://mvnrepository.com/artifact/log4j/log4j
     compile group: 'log4j', name: 'log4j', version: '1.2.17'
