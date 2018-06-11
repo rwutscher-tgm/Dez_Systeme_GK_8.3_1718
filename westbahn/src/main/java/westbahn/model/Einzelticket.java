@@ -12,10 +12,6 @@ public class Einzelticket extends Ticket {
 	@Column(name = "ticket_option")
 	private TicketOption ticketOption;
 
-	public Einzelticket(TicketOption ticketOption) {
-		this.ticketOption = ticketOption;
-	}
-
 	public Einzelticket() {
 	}
 
@@ -32,4 +28,5 @@ public class Einzelticket extends Ticket {
         this.zahlung = zahlung;
         this.ticketOption = ticketOption;
 	}
+
 }

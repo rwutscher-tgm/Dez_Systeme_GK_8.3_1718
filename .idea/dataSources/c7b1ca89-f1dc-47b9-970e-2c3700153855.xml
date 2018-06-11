@@ -19,236 +19,232 @@
     <table id="13" parent="2" name="benutzer_tickets"/>
     <table id="14" parent="2" name="hibernate_sequence"/>
     <table id="15" parent="2" name="reservierung"/>
-    <table id="16" parent="2" name="sqlite_master">
+    <table id="16" parent="2" name="sonderangebot_tickets"/>
+    <table id="17" parent="2" name="sqlite_master">
       <System>1</System>
     </table>
-    <column id="17" parent="6" name="ID">
+    <column id="18" parent="6" name="ID">
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="18" parent="6" name="absKmEntfernung">
+    <column id="19" parent="6" name="absKmEntfernung">
       <Position>1</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="19" parent="6" name="absPreisEntfernung">
+    <column id="20" parent="6" name="absPreisEntfernung">
       <Position>2</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="20" parent="6" name="absZeitEntfernung">
+    <column id="21" parent="6" name="absZeitEntfernung">
       <Position>3</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="21" parent="6" name="kopfBahnhof">
+    <column id="22" parent="6" name="kopfBahnhof">
       <Position>4</Position>
       <DataType>boolean|0</DataType>
     </column>
-    <column id="22" parent="6" name="name">
+    <column id="23" parent="6" name="name">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <index id="23" parent="6" name="sqlite_autoindex_Bahnhof_1">
+    <index id="24" parent="6" name="sqlite_autoindex_Bahnhof_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="24" parent="6">
+    <key id="25" parent="6">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_Bahnhof_1</UnderlyingIndexName>
     </key>
-    <column id="25" parent="7" name="ID">
+    <column id="26" parent="7" name="ID">
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="26" parent="7" name="dauer">
+    <column id="27" parent="7" name="dauer">
       <Position>1</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="27" parent="7" name="kontingent">
+    <column id="28" parent="7" name="kontingent">
       <Position>2</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="28" parent="7" name="preisNachlass">
+    <column id="29" parent="7" name="preisNachlass">
       <Position>3</Position>
       <DataType>float|0</DataType>
     </column>
-    <column id="29" parent="7" name="startZeit">
+    <column id="30" parent="7" name="startZeit">
       <Position>4</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <index id="30" parent="7" name="sqlite_autoindex_Sonderangebot_1">
+    <index id="31" parent="7" name="sqlite_autoindex_Sonderangebot_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="31" parent="7">
+    <key id="32" parent="7">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_Sonderangebot_1</UnderlyingIndexName>
     </key>
-    <column id="32" parent="8" name="ID">
+    <column id="33" parent="8" name="ID">
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="33" parent="8" name="bahnhof">
+    <column id="34" parent="8" name="bahnhof">
       <Position>1</Position>
       <DataType>bigint|0</DataType>
     </column>
-    <column id="34" parent="8" name="ende">
+    <column id="35" parent="8" name="ende">
       <Position>2</Position>
       <DataType>bigint|0</DataType>
     </column>
-    <column id="35" parent="8" name="start">
+    <column id="36" parent="8" name="start">
       <Position>3</Position>
       <DataType>bigint|0</DataType>
     </column>
-    <index id="36" parent="8" name="sqlite_autoindex_Strecke_1">
+    <index id="37" parent="8" name="sqlite_autoindex_Strecke_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="37" parent="8">
+    <key id="38" parent="8">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_Strecke_1</UnderlyingIndexName>
     </key>
-    <column id="38" parent="9" name="DTYPE">
+    <column id="39" parent="9" name="DTYPE">
       <DataType>varchar(31)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="39" parent="9" name="ID">
+    <column id="40" parent="9" name="ID">
       <Position>1</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="9" name="ticket_option">
+    <column id="41" parent="9" name="ticket_option">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="41" parent="9" name="gueltigAb">
+    <column id="42" parent="9" name="gueltigAb">
       <Position>3</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="42" parent="9" name="typ">
+    <column id="43" parent="9" name="typ">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="43" parent="9" name="strecke_ID">
+    <column id="44" parent="9" name="strecke_ID">
       <Position>5</Position>
       <DataType>bigint|0</DataType>
     </column>
-    <index id="44" parent="9" name="sqlite_autoindex_Ticket_1">
+    <index id="45" parent="9" name="sqlite_autoindex_Ticket_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="45" parent="9">
+    <key id="46" parent="9">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_Ticket_1</UnderlyingIndexName>
     </key>
-    <column id="46" parent="10" name="ID">
+    <column id="47" parent="10" name="ID">
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="10" name="fahrradStellplaetze">
+    <column id="48" parent="10" name="fahrradStellplaetze">
       <Position>1</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="48" parent="10" name="rollStuhlPlaetze">
+    <column id="49" parent="10" name="rollStuhlPlaetze">
       <Position>2</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="49" parent="10" name="sitzPlaetze">
+    <column id="50" parent="10" name="sitzPlaetze">
       <Position>3</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="50" parent="10" name="startZeit">
+    <column id="51" parent="10" name="startZeit">
       <Position>4</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="51" parent="10" name="ende">
+    <column id="52" parent="10" name="ende">
       <Position>5</Position>
       <DataType>bigint|0</DataType>
     </column>
-    <column id="52" parent="10" name="start">
+    <column id="53" parent="10" name="start">
       <Position>6</Position>
       <DataType>bigint|0</DataType>
     </column>
-    <index id="53" parent="10" name="sqlite_autoindex_Zug_1">
+    <index id="54" parent="10" name="sqlite_autoindex_Zug_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="54" parent="10">
+    <key id="55" parent="10">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_Zug_1</UnderlyingIndexName>
     </key>
-    <column id="55" parent="11" name="id">
+    <column id="56" parent="11" name="id">
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="56" parent="11" name="eMail">
+    <column id="57" parent="11" name="eMail">
       <Position>1</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="57" parent="11" name="nachName">
+    <column id="58" parent="11" name="nachName">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="58" parent="11" name="passwort">
+    <column id="59" parent="11" name="passwort">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="59" parent="11" name="smsNummer">
+    <column id="60" parent="11" name="smsNummer">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="60" parent="11" name="verbuchtePraemienMeilen">
+    <column id="61" parent="11" name="verbuchtePraemienMeilen">
       <Position>5</Position>
       <DataType>bigint|0</DataType>
     </column>
-    <column id="61" parent="11" name="vorName">
+    <column id="62" parent="11" name="vorName">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <index id="62" parent="11" name="sqlite_autoindex_benutzer_1">
+    <index id="63" parent="11" name="sqlite_autoindex_benutzer_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="63" parent="11">
+    <key id="64" parent="11">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_benutzer_1</UnderlyingIndexName>
     </key>
-    <column id="64" parent="12" name="Benutzer_id">
+    <column id="65" parent="12" name="Benutzer_id">
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="65" parent="12" name="reservierungen_id">
+    <column id="66" parent="12" name="reservierungen_id">
       <Position>1</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="66" parent="13" name="Sonderangebot_ID">
+    <column id="67" parent="13" name="Benutzer_id">
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="67" parent="13" name="tickets_ID">
+    <column id="68" parent="13" name="tickets_ID">
       <Position>1</Position>
-      <DataType>bigint|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="68" parent="13" name="Benutzer_id">
-      <Position>2</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
     </column>
@@ -300,22 +296,31 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_reservierung_1</UnderlyingIndexName>
     </key>
-    <column id="80" parent="16" name="type">
+    <column id="80" parent="16" name="Sonderangebot_ID">
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="16" name="tickets_ID">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="17" name="type">
       <DataType>text|0</DataType>
     </column>
-    <column id="81" parent="16" name="name">
+    <column id="83" parent="17" name="name">
       <Position>1</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="82" parent="16" name="tbl_name">
+    <column id="84" parent="17" name="tbl_name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="83" parent="16" name="rootpage">
+    <column id="85" parent="17" name="rootpage">
       <Position>3</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="84" parent="16" name="sql">
+    <column id="86" parent="17" name="sql">
       <Position>4</Position>
       <DataType>text|0</DataType>
     </column>

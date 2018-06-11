@@ -34,7 +34,7 @@ public class Main {
 		log.setLevel(Level.ALL);
 		try {
 			log.info("Starting \"Mapping Perstistent Classes and Associations\" (task1)");
-			task01();
+			//task01();
 			log.info("Starting \"Working with JPA-QL and the Hibernate Criteria API\" (task2)");
 			task02a();
 			task02b();
@@ -361,25 +361,21 @@ public class Main {
         em.getTransaction().commit();
     }
 
-
-
-
-
-
-
-
 	public static void task01() throws ParseException, InterruptedException {
 
+        /*
         DAO<Bahnhof> bahnhofDAO = new DAO<>();
         bahnhofDAO.save(new Bahnhof());
         bahnhofDAO.close();
+        */
 
-        /*
+
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("westbahn");
         EntityManager em;
         em = factory.createEntityManager();
         fillDB(em);
-*/
+        em.close();
+
         /*System.out.print("Seas");
         DAO<Bahnhof> bahnhofDAO = new DAO<>();
         bahnhofDAO.save(new Bahnhof());
@@ -391,6 +387,19 @@ public class Main {
 
 	public static void task02a() throws ParseException {
 
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("westbahn");
+        EntityManager em;
+        em = factory.createEntityManager();
+
+
+        String email = "david.hofer@gmail.com";
+        List<Reservierung> reservierungen = em.createNamedQuery("Reservierung.findAllReservierungensByEmail")
+        .setParameter("email", email)
+        .getResultList();
+        for (Reservierung reservierung : reservierungen) {
+            System.out.println("Reservierung für " + email + ": " + reservierung);
+        }
+        em.close();
 	}
 
 	public static void task02b() throws ParseException {

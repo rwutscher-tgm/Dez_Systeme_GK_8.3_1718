@@ -5,7 +5,7 @@
 	<entity class="westbahn.model.Reservierung">
         <table name="reservierung"/>
         <named-query name="Reservierung.findAllReservierungensByEmail">
-            <query>SELECT r FROM Reservierung r LEFT JOIN r.benutzer b WHERE b.eMail=:email</query>
+            <query>SELECT r FROM Reservierung r LEFT JOIN r.benutzer b WHERE b=:email</query>
         </named-query>
 		<attributes>
             <id name="id">

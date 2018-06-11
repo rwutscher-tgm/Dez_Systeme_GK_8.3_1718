@@ -9,6 +9,7 @@ public class Sonderangebot {
 
 	@Id
 	@Column
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long ID;
 
 	@Column
@@ -25,7 +26,7 @@ public class Sonderangebot {
 
 	@OneToMany
 	@JoinTable(
-			name = "benutzer_tickets",
+			name = "sonderangebot_tickets",
 			joinColumns = {@JoinColumn(referencedColumnName = "id")},
 			inverseJoinColumns = { @JoinColumn(referencedColumnName = "id") })
 	private List<Ticket> tickets;

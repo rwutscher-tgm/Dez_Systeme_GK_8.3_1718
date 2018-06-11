@@ -25,4 +25,22 @@ public class Zeitkarte extends Ticket {
 		this.typ = typ;
 	}
 
+	public Zeitkarte() {
+	}
+
+	public Date getGueltigAb() {
+		return gueltigAb;
+	}
+
+	public void setGueltigAb(Date gueltigAb) {
+		this.gueltigAb = gueltigAb;
+	}
+
+	public ZeitkartenTyp getTyp() {
+		return typ;
+	}
+
+	public void setTyp(ZeitkartenTyp typ) {
+		this.typ = typ;
+	}
 }

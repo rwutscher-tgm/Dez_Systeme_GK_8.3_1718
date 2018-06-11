@@ -10,6 +10,7 @@ public class Zug {
 
 	@Id
 	@Column
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long ID;
 
 	@Column

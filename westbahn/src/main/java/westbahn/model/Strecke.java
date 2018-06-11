@@ -7,6 +7,7 @@ public class Strecke {
 
 	@Id
 	@Column
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long ID;
 
 	@ManyToOne
