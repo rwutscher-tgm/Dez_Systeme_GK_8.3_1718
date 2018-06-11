@@ -6,9 +6,8 @@ import java.util.List;
 
 
 @NamedQuery(
-		name = "findBenutzerWithMonatskarte",
-		query = "SELECT b FROM Benutzer b LEFT JOIN b.tickets t WHERE t.typ=1"
-		//query = "from Benutzer b where b.tickets = 'MONATSKARTE'"
+		name = "Benutzer.findBenutzerWithMonatskarte",
+		query = "SELECT b FROM Benutzer b LEFT JOIN b.tickets t WHERE t.typ='MONATSKARTE'"
 )
 @Entity
 @Table(name = "benutzer")

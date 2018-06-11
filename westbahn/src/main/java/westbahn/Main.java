@@ -362,27 +362,11 @@ public class Main {
     }
 
 	public static void task01() throws ParseException, InterruptedException {
-
-        /*
-        DAO<Bahnhof> bahnhofDAO = new DAO<>();
-        bahnhofDAO.save(new Bahnhof());
-        bahnhofDAO.close();
-        */
-
-
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("westbahn");
         EntityManager em;
         em = factory.createEntityManager();
         fillDB(em);
         em.close();
-
-        /*System.out.print("Seas");
-        DAO<Bahnhof> bahnhofDAO = new DAO<>();
-        bahnhofDAO.save(new Bahnhof());
-        bahnhofDAO.close();*/
-
-
-
 	}
 
 	public static void task02a() throws ParseException {
@@ -403,7 +387,16 @@ public class Main {
 	}
 
 	public static void task02b() throws ParseException {
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("westbahn");
+        EntityManager em;
+        em = factory.createEntityManager();
 
+        List<Benutzer> benutzerMitMonatskarte = em.createNamedQuery("Benutzer.findBenutzerWithMonatskarte").getResultList();
+        for (Benutzer benutzer : benutzerMitMonatskarte) {
+            System.out.println("Benutzer mit Monatkarte: " + benutzer);
+        }
+
+        em.close();
 	}
 
 	public static void task02c() throws ParseException {
