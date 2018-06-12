@@ -353,6 +353,8 @@ public class Main {
         benutzerBen.setTickets(Collections.singletonList(zeitkarteJahr));
         benutzerBen.setReservierungen(Collections.singletonList(reservierung3));
         em.getTransaction().commit();
+
+        em.close();
     }
 
     public static void save(EntityManager em, Object o){
@@ -400,7 +402,20 @@ public class Main {
 	}
 
 	public static void task02c() throws ParseException {
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("westbahn");
+        EntityManager em;
+        em = factory.createEntityManager();
 
+
+        long streckeId = 12;
+        List<Ticket> ticketsOhneReservierung = em.createNamedQuery("Ticket.findTicketByStrecke")
+        .setParameter("streckeID", streckeId)
+        .getResultList();
+        for (Ticket ticket : ticketsOhneReservierung) {
+            System.out.println("Strecke ohne Reservierung für Strecke#" + streckeId + ": " + ticket);
+        }
+
+        em.close();
 	}
 
 }

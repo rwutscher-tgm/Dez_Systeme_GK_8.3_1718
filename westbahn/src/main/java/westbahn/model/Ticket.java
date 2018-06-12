@@ -3,9 +3,8 @@ package westbahn.model;
 import javax.persistence.*;
 
 @NamedQuery(
-		name = "findTicketByStrecke",
-		query = "SELECT t FROM Ticket t LEFT JOIN t.strecke s WHERE s.start=:start AND s.ende=:ende"
-		//query = "from Ticket t where (select f from Strecke f where f.start = :start) "
+		name = "Ticket.findTicketByStrecke",
+		query = "SELECT t FROM Ticket t LEFT JOIN t.strecke s WHERE s.id=:streckeID"
 )
 @Entity
 public abstract class Ticket {
