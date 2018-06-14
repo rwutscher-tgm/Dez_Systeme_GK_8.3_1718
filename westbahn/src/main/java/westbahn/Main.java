@@ -2,8 +2,8 @@ package westbahn;
 
 //import org.apache.log4j.Level;
 //import org.apache.log4j.Logger;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Level;
+//import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -21,7 +21,7 @@ import static org.hibernate.jpa.AvailableSettings.PERSISTENCE_UNIT_NAME;
 
 public class Main {
 
-	private static final Logger log = Logger.getLogger(Main.class);
+	//private static final Logger log = Logger.getLogger(Main.class);
 	
 	static SimpleDateFormat dateForm = new SimpleDateFormat("dd.MM.yyyy");
 	static SimpleDateFormat timeForm = new SimpleDateFormat("dd.MM.yyyy mm:hh");
@@ -31,11 +31,11 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		log.setLevel(Level.ALL);
+		//log.setLevel(Level.ALL);
 		try {
-			log.info("Starting \"Mapping Perstistent Classes and Associations\" (task1)");
-			//task01();
-			log.info("Starting \"Working with JPA-QL and the Hibernate Criteria API\" (task2)");
+			//log.info("Starting \"Mapping Perstistent Classes and Associations\" (task1)");
+			task01();
+			//log.info("Starting \"Working with JPA-QL and the Hibernate Criteria API\" (task2)");
 			task02a();
 			task02b();
 			task02c();
@@ -353,8 +353,6 @@ public class Main {
         benutzerBen.setTickets(Collections.singletonList(zeitkarteJahr));
         benutzerBen.setReservierungen(Collections.singletonList(reservierung3));
         em.getTransaction().commit();
-
-        em.close();
     }
 
     public static void save(EntityManager em, Object o){
@@ -369,6 +367,7 @@ public class Main {
         em = factory.createEntityManager();
         fillDB(em);
         em.close();
+        factory.close();
 	}
 
 	public static void task02a() throws ParseException {
@@ -386,6 +385,7 @@ public class Main {
             System.out.println("Reservierung für " + email + ": " + reservierung);
         }
         em.close();
+        factory.close();
 	}
 
 	public static void task02b() throws ParseException {
@@ -399,6 +399,7 @@ public class Main {
         }
 
         em.close();
+        factory.close();
 	}
 
 	public static void task02c() throws ParseException {
@@ -406,16 +407,32 @@ public class Main {
         EntityManager em;
         em = factory.createEntityManager();
 
-
         long streckeId = 12;
+
+        em.getTransaction().begin();
+        //Linz
+        //Attnang-Puchheim Start
+
+        Bahnhof start = (Bahnhof) em.createQuery("FROM Bahnhof b WHERE b.name='Wien Hütteldorf'").getResultList().get(0);
+        Bahnhof ende = (Bahnhof) em.createQuery("FROM Bahnhof b WHERE b.name='Wels'").getResultList().get(0);
+
+        Strecke s = (Strecke) em.createQuery("FROM Strecke s").getResultList().get(1);//3
+
+        System.out.println("start: "+s.getStart().getName()+", ende: "+s.getEnde().getName());
+
+
+        em.getTransaction().commit();
+
         List<Ticket> ticketsOhneReservierung = em.createNamedQuery("Ticket.findTicketByStrecke")
-        .setParameter("streckeID", streckeId)
-        .getResultList();
+                .setParameter("start", start/*s.getStart()*/)
+                .setParameter("ende", ende/*s.getEnde()*/)
+                .getResultList();
         for (Ticket ticket : ticketsOhneReservierung) {
-            System.out.println("Strecke ohne Reservierung für Strecke#" + streckeId + ": " + ticket);
+            System.out.println("Tickets ohne Reservierung: " + ticket);
         }
 
         em.close();
+        factory.close();
 	}
 
 }

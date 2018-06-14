@@ -433,9 +433,8 @@ public class TestPersistObjects extends TestCase {
     @Override
     protected void tearDown() throws Exception {
         super.tearDown();
+        this.em.close();
         this.factory.close();
-//        this.em.close();
-        clearDatabase();
     }
 
     public void clearDatabase(){

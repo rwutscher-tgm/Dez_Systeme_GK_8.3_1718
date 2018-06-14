@@ -4,7 +4,8 @@ import javax.persistence.*;
 
 @NamedQuery(
 		name = "Ticket.findTicketByStrecke",
-		query = "SELECT t FROM Ticket t LEFT JOIN t.strecke s WHERE s.id=:streckeID"
+//		query = "SELECT t FROM Ticket t LEFT JOIN t.strecke s WHERE s.id=:streckeID"
+		query = "SELECT t FROM Benutzer b JOIN b.tickets t WHERE t.strecke.start=:start AND t.strecke.ende=:ende AND t.strecke NOT in (SELECT r.strecke FROM b.reservierungen r)"
 )
 @Entity
 public abstract class Ticket {
