@@ -30,7 +30,7 @@
         <property name="hibernate.connection.driver" value="com.mysql.jdbc.Driver" />
         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />-->
 
-        <property name="hibernate.connection.url" value="jdbc:sqlite:westbahn/src/main/resources/database.db" />
+        <property name="hibernate.connection.url" value="jdbc:sqlite:src/main/resources/database.db" />
         <property name="hibernate.dialect" value="com.enigmabridge.hibernate.dialect.SQLiteDialect" />
 
         <property name="hibernate.hbm2ddl.auto" value="update"/>
