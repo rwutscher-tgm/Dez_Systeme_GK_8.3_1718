@@ -197,8 +197,6 @@ public class TestQueries  extends TestCase {
 
     }
 
-
-
     @Override
     protected void tearDown() throws Exception {
         super.tearDown();
